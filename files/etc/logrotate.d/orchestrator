@@ -1,0 +1,9 @@
+/var/log/orchestrator.log {
+  daily
+  rotate 7
+  missingok
+  ifempty
+  compress
+  nodelaycompress
+  copytruncate
+}
