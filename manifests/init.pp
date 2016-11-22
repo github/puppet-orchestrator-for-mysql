@@ -25,7 +25,7 @@ class orchestrator (
   validate_bool($service_manage)
   validate_string($service_name)
 
-  # Concept pulled from: https://github.com/puppetlabs/puppetlabs-ntp/blob/master/manifests/init.pp#L98
+  # https://github.com/puppetlabs/puppetlabs-ntp/blob/8db718ca76d05861b898e26764df1edb79bec989/manifests/init.pp#L65-L67
   #
   # Anchor this as per #8040 - this ensures that classes won't float off and
   # mess everything up.  You can read about this at:
