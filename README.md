@@ -1,5 +1,6 @@
 # puppet-orchestrator-for-mysql
-Puppet Module used with Orchestrator
+
+This module is to install the MySQL tool called Orchestrator via puppet. Orchestrator is used for managing replication topologies. See https://github.com/github/orchestrator for instructions on appopriate configuration and setup.
 
 # Usage
 
@@ -74,3 +75,8 @@ Puppet Module used with Orchestrator
     package_manage  => true,
   }
 ```
+# Assumptions
+
+* Puppetlab's stdlib is used by this module.
+
+* The orchestrator deb/rpm package is available to puppet if `orchestrator::params::package_manage` is `true`.
