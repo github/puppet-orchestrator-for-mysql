@@ -15,7 +15,7 @@ This module is to install the MySQL tool called Orchestrator via puppet. Orchest
     'SlaveLagQuery'                              => 'select lag from test.heartbeat_table',
     'DiscoverByShowSlaveHosts'                   => false,
     'DetectClusterAliasQuery'                    => 'select cluster_alias from test.cluster_info_table where 1=1',
-    'DetectClusterDomainQuery'                   => "select cluster_domain from test.cluster_info_table where 1=1',
+    'DetectClusterDomainQuery'                   => 'select cluster_domain from test.cluster_info_table where 1=1',
     'DataCenterPattern'                          => '.*-(.*)-.*[.].*[.]example[.]com',
     'PhysicalEnvironmentPattern'                 => '.*-.*-(.*)[.].*[.]example[.]com',
     'PseudoGTIDPattern'                          => '`heartbeat` (ts, server_id, file, position, relay_master_log_file, exec_master_log_pos) VALUES',

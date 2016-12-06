@@ -10,8 +10,8 @@ class orchestrator::params {
   $service_ensure    = 'running'
   $service_manage    = true
   $service_name      = 'orchestrator'
-  $srv_cnf           = '/etc/mysql/orchestrator_srv.cnf'
-  $topology_cnf      = '/etc/mysql/orchestrator.cnf'
+  $srv_cnf           = '/etc/orchestrator_srv.cnf'
+  $topology_cnf      = '/etc/orchestrator.cnf'
 
   $config_defaults   = {
     'Debug'                                      => true,
