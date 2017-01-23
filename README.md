@@ -80,3 +80,13 @@ This module is to install the MySQL tool called Orchestrator via puppet. Orchest
 * Puppetlab's stdlib is used by this module.
 
 * The orchestrator deb/rpm package is available to puppet if `orchestrator::params::package_manage` is `true`.
+
+## Status
+Stable and in active development.
+
+## Contributions
+Contributions are encouraged. See [CONTRIBUTING.md](https://github.com/github/puppet-orchestrator-for-mysql/blob/master/CONTRIBUTING.md) for more information.
+
+## License
+Licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
+The full license text is available in [LICENSE](https://github.com/github/puppet-orchestrator-for-mysql/blob/master/LICENSE).
