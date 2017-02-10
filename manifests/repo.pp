@@ -1,6 +1,6 @@
 # Manage the packagecloud repo's
 class orchestrator::repo inherits orchestrator {
-  if $orchestrator::manage_repo {
+  if $orchestrator::repo_manage {
     include packagecloud
 
     case $::operatingsystem {
