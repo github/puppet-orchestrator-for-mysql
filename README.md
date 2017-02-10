@@ -81,6 +81,8 @@ This module is to install the MySQL tool called Orchestrator via puppet. Orchest
 
 * The orchestrator deb/rpm package is available to puppet if `orchestrator::params::package_manage` is `true`.
 
+* Puppet will manage the [Orchestrator Packagecloud repo](https://packagecloud.io/github/orchestrator) if `orchestrator::params::repo_manage` is `true`. *Note*: this functionality will require the [computology/packagecloud]( https://forge.puppet.com/computology/packagecloud) module dependency.
+
 ## Status
 Stable and in active development.
 
