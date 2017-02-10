@@ -6,6 +6,7 @@ class orchestrator::params {
   $package_ensure    = 'present'
   $package_manage    = true
   $package_name      = [ 'orchestrator' ]
+  $repo_manage       = true
   $service_enable    = true
   $service_ensure    = 'running'
   $service_manage    = true
@@ -13,6 +14,7 @@ class orchestrator::params {
   $srv_cnf           = '/etc/orchestrator_srv.cnf'
   $topology_cnf      = '/etc/orchestrator.cnf'
 
+  # lint:ignore:140chars
   $config_defaults   = {
     'Debug'                                      => true,
     'EnableSyslog'                               => false,
@@ -150,4 +152,5 @@ class orchestrator::params {
     'GraphitePath'                               => '',
     'GraphiteConvertHostnameDotsToUnderscores'   => true,
   }
+  # lint:endignore
 }
