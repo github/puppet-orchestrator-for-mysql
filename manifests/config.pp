@@ -1,7 +1,5 @@
 #
-
 class orchestrator::config inherits orchestrator {
-
   # Create a merged together set of options.  Rightmost hashes win over left. Requires stdlib
   $options = merge($orchestrator::config_defaults, $orchestrator::config_override)
 
@@ -12,5 +10,4 @@ class orchestrator::config inherits orchestrator {
     mode    => '0644',
     content => template($orchestrator::config_template),
   }
-
 }
