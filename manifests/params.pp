@@ -1,16 +1,17 @@
 #
 class orchestrator::params {
-
   $config            = '/etc/orchestrator.conf.json'
   $config_template   = 'orchestrator/orchestrator.conf.json.erb'
   $package_ensure    = 'present'
   $package_manage    = true
-  $package_name      = [ 'orchestrator' ]
+  $package_name      = ['orchestrator']
   $repo_manage       = true
   $service_enable    = true
   $service_ensure    = 'running'
   $service_manage    = true
   $service_name      = 'orchestrator'
+  $service_user      = 'root'
+  $service_group     = 'root'
   $srv_cnf           = '/etc/orchestrator_srv.cnf'
   $topology_cnf      = '/etc/orchestrator.cnf'
 
@@ -74,7 +75,7 @@ class orchestrator::params {
     'AuthUserHeader'                             => '',
     'PowerAuthUsers'                             => ['*'],
     'ClusterNameToAlias'                         => {
-      '127.0.0.1' => 'test suite'
+      '127.0.0.1' => 'test suite',
     },
     'AccessTokenUseExpirySeconds'                => 60,
     'AccessTokenExpiryMinutes'                   => 1440,
@@ -120,26 +121,26 @@ class orchestrator::params {
     'RecoveryPeriodBlockSeconds'                 => 600,
     'RecoveryIgnoreHostnameFilters'              => [],
     'RecoverMasterClusterFilters'                => [
-      '_master_pattern_'
+      '_master_pattern_',
     ],
     'RecoverIntermediateMasterClusterFilters'    => [
-      '_intermediate_master_pattern_'
+      '_intermediate_master_pattern_',
     ],
     'OnFailureDetectionProcesses'                => [
-      "echo 'Detected {failureType} on {failureCluster}. Affected replicas: {countSlaves}' >> /tmp/recovery.log"
+      "echo 'Detected {failureType} on {failureCluster}. Affected replicas: {countSlaves}' >> /tmp/recovery.log",
     ],
     'PreFailoverProcesses'                       => [
-      "echo 'Will recover from {failureType} on {failureCluster}' >> /tmp/recovery.log"
+      "echo 'Will recover from {failureType} on {failureCluster}' >> /tmp/recovery.log",
     ],
     'PostFailoverProcesses'                      => [
-      "echo '(for all types) Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Successor: {successorHost}:{successorPort}' >> /tmp/recovery.log"
+      "echo '(for all types) Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Successor: {successorHost}:{successorPort}' >> /tmp/recovery.log",
     ],
     'PostUnsuccessfulFailoverProcesses'          => [],
     'PostMasterFailoverProcesses'                => [
-      "echo 'Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Promoted: {successorHost}:{successorPort}' >> /tmp/recovery.log"
+      "echo 'Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Promoted: {successorHost}:{successorPort}' >> /tmp/recovery.log",
     ],
     'PostIntermediateMasterFailoverProcesses'    => [
-      "echo 'Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Successor: {successorHost}:{successorPort}' >> /tmp/recovery.log"
+      "echo 'Recovered from {failureType} on {failureCluster}. Failed: {failedHost}:{failedPort}; Successor: {successorHost}:{successorPort}' >> /tmp/recovery.log",
     ],
     'CoMasterRecoveryMustPromoteOtherCoMaster'   => true,
     'DetachLostSlavesAfterMasterFailover'        => true,
