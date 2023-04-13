@@ -24,6 +24,10 @@
 #   if true module willl manage service
 # @param service_name
 #   service name to manage. Default 'orchestrator'
+# @param service_user
+#   user to own the service. Default 'root'
+# @param service_group
+#   group to own the service. Default 'root'
 class orchestrator (
   String $config                        = $orchestrator::params::config,
   Hash[String[1], Any] $config_defaults = $orchestrator::params::config_defaults,
@@ -37,6 +41,8 @@ class orchestrator (
   String $service_ensure                = $orchestrator::params::service_ensure,
   Boolean $service_manage               = $orchestrator::params::service_manage,
   String $service_name                  = $orchestrator::params::service_name,
+  String $service_user                  = $orchestrator::params::service_user,
+  String $service_group                 = $orchestrator::params::service_group,
 ) inherits orchestrator::params {
   validate_absolute_path($config)
   validate_string($config_template)

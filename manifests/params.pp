@@ -10,6 +10,8 @@ class orchestrator::params {
   $service_ensure    = 'running'
   $service_manage    = true
   $service_name      = 'orchestrator'
+  $service_user      = 'root'
+  $service_group     = 'root'
   $srv_cnf           = '/etc/orchestrator_srv.cnf'
   $topology_cnf      = '/etc/orchestrator.cnf'
 

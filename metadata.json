@@ -57,6 +57,7 @@
   ],
   "dependencies": [
     { "name": "puppetlabs/stdlib", "version_requirement": ">= 3.2.0 <5.0.0" },
-    { "name": "computology/packagecloud", "version_requirement": ">= 0.2.0" }
+    { "name": "computology/packagecloud", "version_requirement": ">= 0.2.0" },
+    { "name": "voxpupuli/systemd", "version_requirement": ">= 4.1.0" }
   ]
 }
