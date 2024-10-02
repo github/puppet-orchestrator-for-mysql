@@ -1,4 +1,4 @@
-# puppet-orchestrator-for-mysql
+# puppet-orchestrator-for-mysql 
 
 This module is to install the MySQL tool called Orchestrator via puppet. Orchestrator is used for managing replication topologies. See https://github.com/github/orchestrator for instructions on appopriate configuration and setup.
 
