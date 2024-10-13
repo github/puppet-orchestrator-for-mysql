@@ -19,5 +19,4 @@ class orchestrator::repo inherits orchestrator {
       }
     }
   }
-
 }
